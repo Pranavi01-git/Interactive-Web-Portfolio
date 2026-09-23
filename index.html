@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Interactive Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">&lt;DevPortfolio /&gt;</div>
+        <ul class="nav-links">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button id="theme-toggle" class="theme-btn" aria-label="Toggle Theme">
+            <i class="fa-solid me-2 fa-moon"></i>
+        </button>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="hero" class="hero">
+        <div class="hero-content">
+            <h1>Hi, I'm <span class="highlight">Pranavi Saxena</span></h1>
+            <h2>I am <span id="typing-text"></span><span class="cursor">&nbsp;</span></h2>
+            <p>Aspiring Software Engineer skilled in Python, Java, DSA, and Web Development with a creative background in UI/UX and visual design.</p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn primary-btn">View My Work</a>
+                <a href="#contact" class="btn secondary-btn">Get In Touch</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-card">
+            <p>I am a computer science student passionate about solving real-world problems through code and design. With a strong baseline in software development, data structures (stacks, trees), and web tools, I aim to create efficient and visually compelling applications.</p>
+            
+            <div class="highlights-grid">
+                <div class="highlight-item">
+                    <i class="fa-solid fa-certificate"></i>
+                    <h4>Certified Learner</h4>
+                    <p>IIT Madras, Infosys, Udemy</p>
+                </div>
+                <div class="highlight-item">
+                    <i class="fa-solid fa-trophy"></i>
+                    <h4>National Qualifier</h4>
+                    <p>Spell Bee Competition</p>
+                </div>
+                <div class="highlight-item">
+                    <i class="fa-solid fa-brain"></i>
+                    <h4>Quantitative Focus</h4>
+                    <p>Abacus Level 6 Qualified</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <h2 class="section-title">Technical Skills</h2>
+        <div class="skills-container">
+            <div class="skill-box">
+                <h3><i class="fa-solid fa-code"></i> Languages</h3>
+                <p>Python • Java • HTML5 • CSS3 • C (Basics)</p>
+            </div>
+            <div class="skill-box">
+                <h3><i class="fa-solid fa-network-wired"></i> Computer Science</h3>
+                <p>Data Structures (Stacks, Trees) • OOP • Algorithms</p>
+            </div>
+            <div class="skill-box">
+                <h3><i class="fa-solid fa-palette"></i> Creative & Design</h3>
+                <p>Graphic Design • Video Editing • Content Strategy (NGO Team)</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <h2 class="section-title">Featured Projects</h2>
+        
+        <!-- Interactive Filter Buttons -->
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="web">Web</button>
+            <button class="filter-btn" data-filter="python">Python / DSA</button>
+        </div>
+
+        <div class="projects-grid">
+            <div class="project-card" data-category="web">
+                <div class="project-header">
+                    <i class="fa-solid fa-laptop-code project-icon"></i>
+                    <h3>Interactive Web Portfolio</h3>
+                </div>
+                <p>A responsive, modern web portfolio featuring dynamic dark mode, smooth scrolling, and interactive elements built with HTML, CSS, and JS.</p>
+                <span class="tech-tag">HTML / CSS / JS</span>
+            </div>
+
+            <div class="project-card" data-category="python">
+                <div class="project-header">
+                    <i class="fa-solid fa-diagram-project project-icon"></i>
+                    <h3>DSA Utility Tool</h3>
+                </div>
+                <p>A Python application showcasing practical implementations of Stack data structures for undo operations and Tree structures for file directory visualization.</p>
+                <span class="tech-tag">Python / Algorithms</span>
+            </div>
+
+            <div class="project-card" data-category="web">
+                <div class="project-header">
+                    <i class="fa-solid fa-pen-nib project-icon"></i>
+                    <h3>NGO Design Campaigns</h3>
+                </div>
+                <p>Created creative visual assets, branding elements, and multimedia edits as part of an NGO core design and editing team.</p>
+                <span class="tech-tag">Design / UI / UX</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <h2 class="section-title">Contact Me</h2>
+        <form id="contact-form" class="contact-form">
+            <div class="input-group">
+                <input type="text" id="name" required placeholder="Your Name">
+            </div>
+            <div class="input-group">
+                <input type="email" id="email" required placeholder="Your Email">
+            </div>
+            <div class="input-group">
+                <textarea id="message" rows="5" required placeholder="Your Message"></textarea>
+            </div>
+            <button type="submit" class="btn primary-btn">Send Message</button>
+        </form>
+        <p id="form-status" class="status-msg"></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Pranavi Saxena. Built with HTML, CSS, & JavaScript.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
